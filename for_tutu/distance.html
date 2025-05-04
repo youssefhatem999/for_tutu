@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="distance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .country-icon i {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .country-icon i:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .element {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .arabic, .serbian {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .transliteration {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .translation {
+            font-size: 1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+    
+    <div class="container">
+        <h1 class="title">About US</h1>
+
+        <!-- Cultural Bridge Section -->
+        <div class="section cultural-bridge">
+            <h2>Our Languages</h2>
+            <div class="bridge-container">
+                <div class="country egypt">
+                    <div class="country-icon">
+                        <i class="fas fa-heart" style="color: #D4AF37;"></i>
+                    </div>
+                    <h3>Egypt</h3>
+                    <div class="cultural-elements">
+                        <div class="element">
+                            <span class="arabic">مرحباً</span>
+                            <span class="transliteration">Marhaban</span>
+                            <span class="translation">Hello</span>
+                        </div>
+                        <div class="element">
+                            <span class="arabic">أحبك</span>
+                            <span class="transliteration">Uhibbuka</span>
+                            <span class="translation">I love you</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bridge">
+                    <div class="hearts-line"></div>
+                </div>
+                <div class="country serbia">
+                    <div class="country-icon">
+                        <i class="fas fa-heart" style="color: #C6363C"></i>
+                    </div>
+                    <h3>Serbia</h3>
+                    <div class="cultural-elements">
+                        <div class="element">
+                            <span class="serbian">Здраво</span>
+                            <span class="transliteration">Zdravo</span>
+                            <span class="translation">Hello</span>
+                        </div>
+                        <div class="element">
+                            <span class="serbian">Волим те</span>
+                            <span class="transliteration">Volim te</span>
+                            <span class="translation">I love you</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strength Meter Section -->
+        <div class="section strength-meter">
+            <h2>Our Love's Strength</h2>
+            <div class="meter-container">
+                <div class="meter">
+                    <div class="meter-fill" style="width: 100%;"></div>
+                </div>
+                <div class="strength-stats">
+                    <div class="stat">
+                        <span class="value" id="daysTogether">731</span>
+                        <span class="label">Days Together</span>
+                    </div>
+                    <div class="stat">
+                        <span class="value" id="distance">2,103 </span>
+                        <span class="label">Kilometers Apart</span>
+                    </div>
+                    <div class="stat">
+                        <span class="value" id="timeDiff">1</span>
+                        <span class="label">Hour Time Difference</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cultural Love Story Timeline -->
+        <div class="section timeline">
+            <h2>Our Love Story</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="date">First Message</div>
+                    <div class="content">
+                        <h3>Our Journey Begins</h3>
+                        <p>The first time we connected with a random message on a random day</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Sharing Music</div>
+                    <div class="content">
+                        <h3>Getting to know each other</h3>
+                        <p>The time when we were getting to know each other little by little</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Texting on a personal level</div>
+                    <div class="content">
+                        <h3>Building a connection</h3>
+                        <p>We connected very quickly, and in no time we liked each other more than we could ever imagine</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Your Bus Trip</div>
+                    <div class="content">
+                        <h3>Becoming officaly together</h3>
+                        <p>Confessing our love for each other, and becoming officially boyfriend and girlfriend</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Our first video call</div>
+                    <div class="content">
+                        <h3>Seeing each other for the first time</h3>
+                        <p>Going from being awkward, shy, making werid accents and noises to being comfortable, laughing, joking and talking about everything and anything together</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Building a relationship</div>
+                    <div class="content">
+                        <h3>Going through ups and downs</h3>
+                        <p>We had our ups and downs, but we always managed to get through them together, and come back stronger than ever</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Going through life together</div>
+                    <div class="content">
+                        <h3>Growing together</h3>
+                        <p>We share our everything with each other, being a witness to each other's ups and downs, hard and easy times, seeing each other grow and learn and change and become a more mature and better person</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="date">Coming Soon</div>
+                    <div class="content">
+                        <h3>Seeing Each Other</h3>
+                        <p>Finally meeting each other, and being together forever InShaAllah, this will not be the end of our story, but only the real beginning of it</p>
+                    </div>
+                </div>
+
+                <!-- More timeline items will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Future Vision Board -->
+        <div class="section vision-board">
+            <h2>Our Future Together</h2>
+            <div class="vision-container">
+                <div class="vision-item">
+                    <h3>Meet each other</h3>
+                    <p>Seeing each other for the first time.</p>
+                </div>
+                <div class="vision-item">
+                    <h3>Visit Serbia</h3>
+                    <p>Discovering Sandžak's beauty</p>
+                </div>
+                <div class="vision-item">
+                    <h3>Visit Egypt</h3>
+                    <p>Exploring the pyramids together</p>
+                </div>
+                <div class="vision-item">
+                    <h3>Get married</h3>
+                    <p>Make our bond official, and become husband and wife</p>
+                </div>
+                <div class="vision-item">
+                    <h3>Fulfil our dreams</h3>
+                    <p>See each other fulfil our dreams, and become successful in our lives</p>
+                </div>
+                <div class="vision-item">
+                    <h3>See the world together</h3>
+                    <p>Go on adventures together, and see the beautiful world together</p>
+                </div>
+                <div class="vision-item">
+                    <h3>Make a family</h3>
+                    <p>Have beautiful children together, and be one big happy family</p>
+                </div>
+                <div class="vision-item">
+                    <h3>Grow old together</h3>
+                    <p>Spend all our days together, and grow old together-0</p>
+                </div>
+                <div class="vision-item">
+                    <h3>More to come</h3>
+                    <p>Living life to the fullest, and making the most of every moment together</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="hearts"></div>
+    <script src="distance.js"></script>
+</body>
+</html> 

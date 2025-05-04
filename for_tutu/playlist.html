@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Playlist</title>
+    <link rel="stylesheet" href="playlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+    
+    <div class="container">
+        <h1>Our Special Playlist</h1>
+        <div class="playlist">
+            <div class="song">
+                <div class="song-info">
+                    <h3>Song Title 1</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="song-message">
+                    <p>This song reminds me of our first video call...</p>
+                </div>
+            </div>
+            
+            <div class="song">
+                <div class="song-info">
+                    <h3>Song Title 2</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="song-message">
+                    <p>We listened to this together while watching the stars...</p>
+                </div>
+            </div>
+            
+            <div class="song">
+                <div class="song-info">
+                    <h3>Song Title 3</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="song-message">
+                    <p>This was playing when we first said "I love you"...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="add-song">
+            <h2>Add a New Song</h2>
+            <form id="songForm">
+                <input type="text" placeholder="Song Title" required>
+                <input type="text" placeholder="Artist" required>
+                <textarea placeholder="Why is this song special to us?" required></textarea>
+                <button type="submit">Add Song</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="hearts"></div>
+    <script src="playlist.js"></script>
+</body>
+</html> 

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutu & Kiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6b8b;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff6b8b;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-content {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff6b8b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 4px 15px rgba(255, 107, 139, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .floating-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        .floating-hearts i {
+            position: absolute;
+            color: #ff6b8b;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts"></div>
+    <div class="content">
+        <h1>Tutu & Kiki</h1>
+        
+        <div class="section">
+            <h2>Our Love Story</h2>
+            <div class="section-content">
+                <img src="dudu-bubu-love.gif" alt="Bubu and Dudu Love">
+                <p>Just like Bubu and Dudu, we love each other so muchie muchie muchie. My love for you is always making me feel alive. You're the best thing that ever happened to me. I love you so muchie muchie muchie my tutu.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Our Adventures</h2>
+            <div class="section-content">
+                <img src="dudu-bubu-adventure.gif" alt="Bubu and Dudu Adventure">
+                <p>I can't wait till we can go on adventures together, just like bubu and dudu, every adventure will be unuqie and will hold a special memory that will live with us forever InShaAllah.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Our Dreams</h2>
+            <div class="section-content">
+                <img src="bubu-rich.gif" alt="Bubu and Dudu Dreams">
+                <p>InShaAllah, all our dreams will come true, and we will be together forever, happy, in love, and rich tutu rich tutu rich kiki rich kiki.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Our Promise</h2>
+            <div class="section-content">
+                <img src="bubu-dudu-dreams.gif" alt="Bubu and Dudu Promise">
+                <p>No matter what happens, no matter what we go through, we will always be together, in the bad times and the good times, we will always stick togeter, and make life a better place for each other. I love you so muchie muchie muchie my tutu butu.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+
+    <script>
+        // Create floating hearts
+        const container = document.querySelector('.floating-hearts');
+        const colors = ['#ff6b8b', '#ff8e9e', '#ffb3c1', '#ffd8e1'];
+
+        function createHeart() {
+            const heart = document.createElement('i');
+            heart.className = 'fas fa-heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html> 
