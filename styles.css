@@ -1,0 +1,313 @@
+:root {
+    --baby-blue: #89CFF0;
+    --baby-pink: #FFB6C1;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--baby-blue), var(--baby-pink));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    max-width: 800px;
+    width: 90%;
+}
+
+.heart-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: var(--baby-pink);
+    position: relative;
+    transform: rotate(45deg);
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: var(--baby-pink);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    left: -50px;
+}
+
+.heart:after {
+    top: -50px;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: var(--baby-pink);
+    margin: 2rem 0 1rem;
+    text-shadow: 2px 2px 4px var(--shadow);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--baby-blue);
+    margin-bottom: 2rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.countdown-item {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 100px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.countdown-item span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--baby-pink);
+    display: block;
+}
+
+.countdown-item span:last-child {
+    font-size: 0.8rem;
+    color: var(--baby-blue);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    background: var(--baby-pink);
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: var(--baby-blue);
+    color: var(--white);
+}
+
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.floating-hearts i {
+    position: absolute;
+    color: var(--baby-pink);
+    animation: float 6s linear infinite;
+    opacity: 0;
+}
+
+.floating-hearts i:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hearts i:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.floating-hearts i:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.floating-hearts i:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.floating-hearts i:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes heartbeat {
+    0% { transform: rotate(45deg) scale(1); }
+    25% { transform: rotate(45deg) scale(1.1); }
+    50% { transform: rotate(45deg) scale(1); }
+    75% { transform: rotate(45deg) scale(1.1); }
+    100% { transform: rotate(45deg) scale(1); }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: 95%;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin: 1.5rem 0 0.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .heart {
+        width: 70px;
+        height: 70px;
+    }
+
+    .heart:before,
+    .heart:after {
+        width: 70px;
+        height: 70px;
+    }
+
+    .heart:before {
+        left: -35px;
+    }
+
+    .heart:after {
+        top: -35px;
+    }
+
+    .countdown {
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .countdown-item {
+        padding: 0.8rem;
+        min-width: 70px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 1.5rem;
+    }
+
+    .countdown-item span:last-child {
+        font-size: 0.7rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Additional mobile optimizations for very small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+        padding: 0.6rem;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 1.2rem;
+    }
+
+    .floating-hearts i {
+        font-size: 1.2rem;
+    }
+}
+
+/* Landscape mode optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin: 1rem 0 0.5rem;
+    }
+
+    .countdown {
+        margin: 1rem 0;
+    }
+
+    .buttons {
+        margin-top: 1rem;
+    }
+}
