@@ -1,5 +1,5 @@
 // Set the anniversary date (May 5th)
-const anniversaryDate = new Date('2025-05-05T00:00:00');
+const anniversaryDate = new Date('2026-05-05T00:00:00');
 
 // Update countdown every second
 function updateCountdown() {
