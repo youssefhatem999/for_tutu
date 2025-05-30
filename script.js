@@ -1,36 +1,70 @@
 // Set the anniversary date (May 5th)
-const anniversaryDate = new Date('2026-05-05T00:00:00');
+const anniversaryDate = new Date('2025-05-05T00:00:00');
 
-// Update countdown every second
-function updateCountdown() {
+// Function to get next anniversary date (May 5th)
+function getNextAnniversary() {
     const now = new Date();
-    const diff = anniversaryDate - now;
+    const currentYear = now.getFullYear();
+    const anniversary = new Date(currentYear, 4, 5); // Month is 0-based, so 4 = May
+    
+    // If anniversary has passed this year, set it for next year
+    if (now > anniversary) {
+        anniversary.setFullYear(currentYear + 1);
+    }
+    
+    return anniversary;
+}
 
+// Function to get next birthday date (May 31st)
+function getNextBirthday() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const birthday = new Date(currentYear, 4, 31); // Month is 0-based, so 4 = May
+    
+    // If birthday has passed this year, set it for next year
+    if (now > birthday) {
+        birthday.setFullYear(currentYear + 1);
+    }
+    
+    return birthday;
+}
+
+// Update countdowns every second
+function updateCountdowns() {
+    const now = new Date();
+    
+    // Update anniversary countdown
+    const anniversaryDiff = getNextAnniversary() - now;
+    updateCountdownDisplay(anniversaryDiff, 'days', 'hours', 'minutes', 'seconds');
+    
+    // Update birthday countdown
+    const birthdayDiff = getNextBirthday() - now;
+    updateCountdownDisplay(birthdayDiff, 'bday-days', 'bday-hours', 'bday-minutes', 'bday-seconds');
+}
+
+function updateCountdownDisplay(diff, daysId, hoursId, minutesId, secondsId) {
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    document.getElementById(daysId).textContent = String(days).padStart(2, '0');
+    document.getElementById(hoursId).textContent = String(hours).padStart(2, '0');
+    document.getElementById(minutesId).textContent = String(minutes).padStart(2, '0');
+    document.getElementById(secondsId).textContent = String(seconds).padStart(2, '0');
 }
 
-// Update countdown immediately and then every second
-updateCountdown();
-setInterval(updateCountdown, 1000);
+// Update countdowns immediately and then every second
+updateCountdowns();
+setInterval(updateCountdowns, 1000);
 
 // Add click handlers for the buttons
-document.getElementById('memoryBtn').addEventListener('click', () => {
-    // Will be implemented later
-    alert('Our memories section coming soon!');
-});
-
 document.addEventListener('DOMContentLoaded', () => {
-    const letterButton = document.getElementById('letterButton');
-    const distanceButton = document.getElementById('distanceButton');
-    const futureButton = document.getElementById('futureButton');
+    const letterButton = document.getElementById('letterBtn');
+    const distanceButton = document.getElementById('distanceBtn');
+    const tutuKikiButton = document.getElementById('tutuKikiBtn');
+    const animationButton = document.getElementById('animationBtn');
+    const birthdayButton = document.getElementById('birthdayBtn');
 
     letterButton.addEventListener('click', () => {
         window.location.href = 'love-letter.html';
@@ -40,8 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'distance.html';
     });
 
-    futureButton.addEventListener('click', () => {
-        window.location.href = 'future.html';
+    tutuKikiButton.addEventListener('click', () => {
+        window.location.href = 'tutu-kiki.html';
+    });
+
+    birthdayButton.addEventListener('click', () => {
+        window.location.href = 'birthday.html';
     });
 
     // Create floating hearts

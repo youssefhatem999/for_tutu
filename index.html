@@ -9,44 +9,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="heart-container">
-            <div class="heart"></div>
-        </div>
-        <div class="content">
-            <h1 class="title">Happy Anniversary</h1>
-            <p class="subtitle">To the most beautiful soul I've ever known</p>
-            <div class="countdown">
-                <div class="countdown-item">
-                    <span id="days">00</span>
-                    <span>Days</span>
+    <div class="main-flex">
+        <div class="left-section">
+            <div class="container">
+                <div class="heart-container">
+                    <div class="heart"></div>
                 </div>
-                <div class="countdown-item">
-                    <span id="hours">00</span>
-                    <span>Hours</span>
+                <div class="content">
+                    <h1 class="title">Happy Anniversary</h1>
+                    <p class="subtitle">To the most beautiful soul I've ever known</p>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <span>Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <span>Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <span>Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <span>Seconds</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="love-letter.html" class="btn" id="letterBtn">Love Letter</a>
+                        <a href="distance.html" class="btn" id="distanceBtn">About Us</a>
+                        <a href="tutu-kiki.html" class="btn" id="tutuKikiBtn">Tutu & Kiki</a>
+                        <button class="btn" id="animationBtn">Clicky for Animation</button>
+                    </div>
                 </div>
-                <div class="countdown-item">
-                    <span id="minutes">00</span>
-                    <span>Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="seconds">00</span>
-                    <span>Seconds</span>
+                <div class="floating-hearts">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
                 </div>
             </div>
-            <div class="buttons">
-                <a href="love-letter.html" class="btn" id="letterBtn">Love Letter</a>
-                <a href="distance.html" class="btn" id="distanceBtn">About Us</a>
-                <a href="tutu-kiki.html" class="btn" id="tutuKikiBtn">Tutu & Kiki</a>
-                <button class="btn" id="animationBtn">Clicky for Animation</button>
-            </div>
         </div>
-        <div class="floating-hearts">
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-heart"></i>
+        <div class="rift-divider">
+            <div class="rift-effect"></div>
+        </div>
+        <div class="right-section birthday-rift">
+            <div class="birthday-ribbon">🎀</div>
+            <div class="birthday-rift-content">
+                <div class="rift-title"><span class="bday-icon">🎉</span> Happy Birthday</div>
+                <div class="birthday-countdown">
+                    <div class="countdown-item birthday-item">
+                        <span id="bday-days">00</span>
+                        <span>Days</span>
+                    </div>
+                    <div class="countdown-item birthday-item">
+                        <span id="bday-hours">00</span>
+                        <span>Hours</span>
+                    </div>
+                    <div class="countdown-item birthday-item">
+                        <span id="bday-minutes">00</span>
+                        <span>Minutes</span>
+                    </div>
+                    <div class="countdown-item birthday-item">
+                        <span id="bday-seconds">00</span>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+                <a href="birthday.html" class="btn birthday-btn" id="birthdayBtn2">Birthday Special</a>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

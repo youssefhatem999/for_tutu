@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mersiha!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-y: auto;
+            background: linear-gradient(135deg, #FF69B4, #FF1493, #FF69B4);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .birthday-container {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 90%;
+            margin: 2rem auto;
+            position: relative;
+            overflow: visible;
+            border: 3px solid #FF69B4;
+            animation: containerGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes containerGlow {
+            0%, 100% { box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3); }
+            50% { box-shadow: 0 10px 40px rgba(255, 20, 147, 0.5); }
+        }
+
+        .birthday-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            background: linear-gradient(45deg, #FF1493, #FF69B4, #FF1493);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 2rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: titleFloat 3s ease-in-out infinite;
+        }
+
+        .birthday-letter {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #333;
+            line-height: 1.8;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            position: relative;
+            animation: letterAppear 1s ease-out;
+        }
+
+        @keyframes letterAppear {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .birthday-letter::before,
+        .birthday-letter::after {
+            content: '❤️';
+            position: absolute;
+            font-size: 2rem;
+            animation: heartFloat 2s ease-in-out infinite;
+        }
+
+        .birthday-letter::before {
+            top: -20px;
+            left: -20px;
+            animation-delay: 0s;
+        }
+
+        .birthday-letter::after {
+            bottom: -20px;
+            right: -20px;
+            animation-delay: 1s;
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(10deg); }
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #FF1493, #FF69B4);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        .back-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+        }
+
+        .floating-elements {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .birthday-container {
+                padding: 2rem;
+            }
+
+            .birthday-title {
+                font-size: 3.5rem;
+            }
+            
+            .birthday-letter {
+                font-size: 1.5rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <div class="birthday-container">
+        <h1 class="birthday-title">Happy Birthday Mersiha!</h1>
+        
+        <div class="birthday-letter">
+            My dearest Mersiha,<br><br>
+            
+On this day, 21 years ago. A beautiful young girl was born to our world, Mersiha, a beautiful sunshine that brings joy, happiness, and beauty anywhere she goes.<br><br>
+
+Happy happy happy birthday Mersiha, we knew each other since you were 19 and look at you now, the most beautiful and amazing girl to ever exist in this world. 21 years of being cute. 21 years of being beautiful. 21 years of being lovely. 21 years of being amazing. 21 years of being you. I love you so much Mersiha.<br><br>
+
+You're my sunshine in cloudy days, my moonlight in sad nights, my smile in bad days, my happiness while everything else makes life heavy. I hope this year will bring you closer to your dreams, i hope this year will be the year you start being you, the year you get to choose what to do, the year you make your own decisions. I hope that on this day next year, you'll be working a job of your choice, studying the field you wanna study, and living your best life possible.<br><br>
+
+You have a kind heart, a pure soul, a beautiful smile, i can't ever state how lucky i am to have you and to be with you, I'll forever be thankful for that, for you to be in my life and I will always do my best to be your backbone and be there for you at every step and every moment of your life.<br><br>
+
+I love you sooooooo much, Mersiha. Happy happy 21 springs on this planet ❤️. <br><br>
+
+
+Bonus part:<br><br>
+(if we were on call and you were reading out loud you can read this silently, you'll know why) <br><br>
+
+I wanna say sorry because ik this isn't anything special, it's just a letter done in a fancy way and is in no way a fitting birthday gift, i made all what you are seeing now way before your birthday was here because i knew how busy I would be and i still wanted to do something that at least looks nice. Also at the time i am writing this we're still not together, if you're reading this then we're still not.<br><br>
+
+As much as i wish to just try again and try once more to do things right, your reason for a breakup this time makes me believe it will just keep happening like this, you don't want to spend your youth waiting for me, i understand that, especially because we need years and years to make it happen, i don't know if you still feel that way or not.<br><br>
+
+My words aren't properly arranged probably, sorry for that. Long story short, i really want us to be together again. I really wanna call you my tutu again, my Mersiha, my wifey, and all that. I just don't know if that will work, especially like I said, that i don't know what you want and if you really can't handle waiting for years to come.<br><br>
+
+I hope that by the time your birthday is here you won't have to read this and we'll be back together, but i don't think that that will be the case, either way, if you don't want to talk about this or us being back together please just feel free to not even mention this part of the letter, that's why I told you to read this silently.<br><br>
+
+Let's hope for the best, for both of us. Happy birthday Mersiha. I love you.<br><br>
+            With all my love,<br>
+            Yusuf ❤️
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <script>
+        // Create floating elements
+        function createFloatingElements() {
+            const elements = ['🎂', '🎁', '🎈', '🎉', '💝', '✨', '🎊', '💖'];
+            const container = document.getElementById('floatingElements');
+            
+            for (let i = 0; i < 20; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.textContent = elements[Math.floor(Math.random() * elements.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.animationDelay = Math.random() * 5 + 's';
+                element.style.fontSize = (Math.random() * 2 + 1.5) + 'rem';
+                container.appendChild(element);
+            }
+        }
+
+        // Create floating elements when page loads
+        window.onload = createFloatingElements;
+    </script>
+</body>
+</html> 
